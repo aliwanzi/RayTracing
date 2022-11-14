@@ -12,12 +12,12 @@ namespace SandTable
 
 		}
 
-		template<typename T, typename F>
-		bool Dispatch(const F& func)
+		template<typename EventType, typename CallBack>
+		bool Dispatch(const CallBack& func)
 		{
-			if (m_eEvent.GetEventType() == T::GetStaticEventType())
+			if (m_eEvent.GetEventType() == EventType::GetStaticEventType())
 			{
-				func(static_cast<T&>(m_eEvent));
+				func(static_cast<EventType&>(m_eEvent));
 				return true;
 			}
 			return false;
