@@ -14,4 +14,176 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Examples\RenderLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Application.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\third\gl3w.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\third\imgui.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\third\imgui_demo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\third\imgui_draw.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\third\imgui_impl_glfw.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\third\imgui_impl_opengl3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\third\imgui_tables.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\third\imgui_widgets.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\third\stb_image.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Logger.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\KeyEvent.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\MouseEvent.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\RenderEvent.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Buffer\Buffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Buffer\VertexArray.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Command\Render.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Command\RenderCommand.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Layers\ImGuiLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Layers\Layer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Shader\Shader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Texture\2DTexture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Texture\Sparse2DTexture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\Window\Window.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application\Application.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\third\imconfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\third\imgui.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\third\imgui_impl_glfw.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\third\imgui_impl_opengl3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\third\imgui_impl_opengl3_loader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\third\imgui_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\third\imstb_rectpack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\third\imstb_textedit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\third\imstb_truetype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\third\stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Logger.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\Event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\KeyEvent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\MouseEvent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\RenderEvent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\SystemDispatcher.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Examples\RenderLayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Buffer\Buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Buffer\VertexArray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Command\Render.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Command\RenderCommand.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Layers\ImGuiLayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Layers\Layer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Shader\Shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Texture\2DTexture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Texture\Sparse2DTexture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Texture\Texture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Window\Window.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

@@ -17,7 +17,6 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -53,25 +52,23 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Label="Shared" >
+  <ImportGroup Label="Shared">
   </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -85,7 +82,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
-
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -120,10 +116,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -134,16 +133,77 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application\Application.cpp" />
+    <ClCompile Include="Core\Logger.cpp" />
+    <ClCompile Include="Core\third\gl3w.c" />
+    <ClCompile Include="Core\third\imgui.cpp" />
+    <ClCompile Include="Core\third\imgui_demo.cpp" />
+    <ClCompile Include="Core\third\imgui_draw.cpp" />
+    <ClCompile Include="Core\third\imgui_impl_glfw.cpp" />
+    <ClCompile Include="Core\third\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="Core\third\imgui_tables.cpp" />
+    <ClCompile Include="Core\third\imgui_widgets.cpp" />
+    <ClCompile Include="Core\third\stb_image.cpp" />
+    <ClCompile Include="Event\KeyEvent.cpp" />
+    <ClCompile Include="Event\MouseEvent.cpp" />
+    <ClCompile Include="Event\RenderEvent.cpp" />
+    <ClCompile Include="Examples\RenderLayer.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Render\Buffer\Buffer.cpp" />
+    <ClCompile Include="Render\Buffer\VertexArray.cpp" />
+    <ClCompile Include="Render\Command\Render.cpp" />
+    <ClCompile Include="Render\Command\RenderCommand.cpp" />
+    <ClCompile Include="Render\Layers\ImGuiLayer.cpp" />
+    <ClCompile Include="Render\Layers\Layer.cpp" />
+    <ClCompile Include="Render\Shader\Shader.cpp" />
+    <ClCompile Include="Render\Texture\2DTexture.cpp" />
+    <ClCompile Include="Render\Texture\Sparse2DTexture.cpp" />
+    <ClCompile Include="Render\Window\Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application\Application.h" />
+    <ClInclude Include="Core\Common.h" />
+    <ClInclude Include="Core\Logger.h" />
+    <ClInclude Include="Core\third\imconfig.h" />
+    <ClInclude Include="Core\third\imgui.h" />
+    <ClInclude Include="Core\third\imgui_impl_glfw.h" />
+    <ClInclude Include="Core\third\imgui_impl_opengl3.h" />
+    <ClInclude Include="Core\third\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="Core\third\imgui_internal.h" />
+    <ClInclude Include="Core\third\imstb_rectpack.h" />
+    <ClInclude Include="Core\third\imstb_textedit.h" />
+    <ClInclude Include="Core\third\imstb_truetype.h" />
+    <ClInclude Include="Core\third\stb_image.h" />
+    <ClInclude Include="Event\Event.h" />
+    <ClInclude Include="Event\KeyEvent.h" />
+    <ClInclude Include="Event\MouseEvent.h" />
+    <ClInclude Include="Event\RenderEvent.h" />
+    <ClInclude Include="Event\SystemDispatcher.h" />
+    <ClInclude Include="Examples\RenderLayer.h" />
+    <ClInclude Include="Render\Buffer\Buffer.h" />
+    <ClInclude Include="Render\Buffer\VertexArray.h" />
+    <ClInclude Include="Render\Command\Render.h" />
+    <ClInclude Include="Render\Command\RenderCommand.h" />
+    <ClInclude Include="Render\Layers\ImGuiLayer.h" />
+    <ClInclude Include="Render\Layers\Layer.h" />
+    <ClInclude Include="Render\Shader\Shader.h" />
+    <ClInclude Include="Render\Texture\2DTexture.h" />
+    <ClInclude Include="Render\Texture\Sparse2DTexture.h" />
+    <ClInclude Include="Render\Texture\Texture.h" />
+    <ClInclude Include="Render\Window\Window.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
